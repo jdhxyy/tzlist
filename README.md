@@ -8,7 +8,7 @@ tzlist依赖内存管理包tzmalloc,使用cip可以安装依赖的包:[cip：C/C
 
 ## 开源
 - [github上的项目地址](https://github.com/jdhxyy/tzlist)
-- [gitee上的项目地址](https://gitee.com/jdhxyy/tzmlist)
+- [gitee上的项目地址](https://gitee.com/jdhxyy/tzlist)
 
 ## API
 ```c
