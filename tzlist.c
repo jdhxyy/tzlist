@@ -5,6 +5,8 @@
 #include "tzlist.h"
 #include "tzmalloc.h"
 
+#include <string.h>
+
 #pragma pack(1)
 
 // tRoot root node
