@@ -87,7 +87,7 @@ void TZListInsertBefore(intptr_t list, TZListNode* node, TZListNode* anchorNode)
     node->Last = anchorNode->Last;
     node->Next = anchorNode;
 
-    // ����ê�ڵ��Ƿ��׽ڵ㴦��ê�ڵ���һ���ڵ�
+    // 根据锚节点是否首节点处理锚节点下一个节点
     if (anchorNode->Last != NULL) {
         anchorNode->Last->Next = node;
     } else {
@@ -106,7 +106,7 @@ void TZListInsertAfter(intptr_t list, TZListNode* node, TZListNode* anchorNode) 
     node->Last = anchorNode;
     node->Next = anchorNode->Next;
 
-    // ����ê�ڵ��Ƿ�β�ڵ㴦��ê�ڵ���һ���ڵ�
+    // 根据锚节点是否尾节点处理锚节点下一个节点
     if (anchorNode->Next != NULL) {
         anchorNode->Next->Last = node;
     } else {
@@ -115,8 +115,8 @@ void TZListInsertAfter(intptr_t list, TZListNode* node, TZListNode* anchorNode) 
     anchorNode->Next = node;
 }
 
-// TZListRemove ɾ���ڵ�
-// ɾ���ڵ���ͷŽڵ��ڵĿ��ٵ����ݿռ��Լ��ͷŽڵ㱾���Ŀռ�
+// TZListRemove 删除节点
+// 删除节点会释放节点内的开辟的数据空间以及释放节点本身的空间
 void TZListRemove(intptr_t list, TZListNode* node) {
     if (list == 0 || node == NULL) {
         return;
